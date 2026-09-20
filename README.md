@@ -1,6 +1,6 @@
 # MasterPost policy pages
 
-Public policy pages for the internal MasterPost application operated by Asian Instant Coffee.
+Public policy pages for the MasterPost local social publishing application.
 
 - `privacy-policy.html`
 - `data-deletion.html`
