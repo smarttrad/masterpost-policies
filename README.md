@@ -18,11 +18,11 @@ Hosting: GitHub Pages, not the Shopify store. `styles.css` is shared by all page
 
 ## Local revision versus published version
 
-The public pages were verified reachable on 13 October 2026. At that check they
-still covered Meta only and the deletion page stated 30 days. The October 13
-local revision adds YouTube/X and provider-specific obligations, but has **not
-been committed, pushed or deployed**. Moving this checkout does not change any URL.
-Do not tell the operator that a local edit is already published.
+The initial 13 October 2026 check found Meta-only public pages. The reviewed
+YouTube/X revision and locally implemented YouTube publishing disclosures were
+committed as `45f987e` and pushed to origin/main on 13 October 2026. A successful
+push is not proof of GitHub Pages deployment; verify the live page content before
+claiming the new public version is served. Moving this checkout changes no URL.
 
 Before publication, review `../docs/policy-review-20261013.md`, proofread the rendered
 pages, confirm the operator's intended changes and keep functionality disclosures
