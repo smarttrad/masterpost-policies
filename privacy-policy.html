@@ -11,45 +11,61 @@
   <main class="card policy">
     <p><a href="index.html">MasterPost Policies</a></p>
     <h1>Privacy Policy</h1>
-    <p class="updated">Effective date: September 20, 2026</p>
+    <p class="updated">Last revised: October 13, 2026</p>
 
     <h2>1. About MasterPost</h2>
-    <p>MasterPost is a local social media publishing and management application. It is used by authorized operators to manage Facebook Pages, Instagram professional accounts and Threads profiles that they own or administer. MasterPost is not offered as a public consumer application and does not provide public user accounts.</p>
+    <p>MasterPost is a local social media management application operated by authorized users for accounts they own or have permission to manage. It supports Facebook Pages, standalone Instagram professional accounts and Threads profiles. Its YouTube video uploader is implemented locally, subject to Google authorization, account eligibility and live verification. X (Twitter) and TikTok remain connection-only. Local testing does not certify production readiness or platform approval. MasterPost is not offered as a public consumer service.</p>
+    <p>This policy applies to MasterPost, not the operator's separate shops, affiliate websites or the platforms themselves. The operator responsible for this local installation can be contacted at <a href="mailto:aringemas91@gmail.com">aringemas91@gmail.com</a>.</p>
 
     <h2>2. Information processed</h2>
     <p>Depending on the features enabled, MasterPost may process:</p>
     <ul>
-      <li>Facebook Page, Instagram and Threads account identifiers;</li>
-      <li>access tokens and authorization metadata required to use official Meta APIs;</li>
+      <li>Meta account and Page identifiers, names, usernames and publishing-permission evidence;</li>
+      <li>YouTube channel ID and channel title, when the YouTube connection is enabled;</li>
+      <li>X account ID, display name and handle, when the X connection is enabled;</li>
+      <li>access and refresh tokens, granted scopes, expiry information and authorization metadata;</li>
       <li>content prepared for publication, media URLs, publishing times, post identifiers and publishing status;</li>
       <li>public comments and related public profile identifiers when comment-management features are enabled; and</li>
       <li>technical logs used for security, troubleshooting, duplicate prevention and delivery verification.</li>
     </ul>
-    <p>MasterPost does not request access to Facebook or Instagram private messages. It does not intentionally collect payment-card details, passwords or other private account credentials from members of the public.</p>
+    <p>The YouTube adapter uses YouTube API Services with <code>youtube.readonly</code> to identify the authorized channel and verify uploaded video status, and <code>youtube.upload</code> to upload operator-selected videos and optional thumbnails. It processes approved titles, descriptions, tags, category, audience, privacy, publication time, synthetic-media and paid-promotion choices, upload progress and returned video identifiers. It does not collect viewing history, manage subscriptions or moderate comments. Old read-only tokens are not upgraded without new consent. The X adapter requests <code>tweet.read</code>, <code>users.read</code> and <code>offline.access</code>, but currently reads only the authorized account's identity. It does not publish posts or collect direct messages, follower lists or timelines. Broader permission descriptions do not mean MasterPost uses every capability allowed.</p>
+    <p>MasterPost does not collect platform login passwords or payment-card details. Login and consent occur on the provider's official pages. No private-message permissions are requested. A TikTok connection-only adapter also exists, but is not enabled simply by this policy; it requires separate setup and consent.</p>
 
     <h2>3. How information is used</h2>
-    <p>Information is used only to authenticate authorized business accounts, publish and manage social content, prevent duplicate posts, monitor token health, process supported public-comment workflows, maintain security and diagnose technical problems.</p>
+    <p>Information is used to connect the selected profile, verify the intended account, maintain its authorization, and operate the specific features authorized by the operator. Enabled Meta features can prepare and publish content, prevent duplicates and process supported public comments. The YouTube publisher uploads only explicitly configured, previewed videos for the selected channel, maintains resumable progress and prevents duplicate uploads. Connection consent alone does not enable a publication schedule. X currently has no publisher. New functions or expanded purposes require updated disclosures and any additional consent or review required by the provider.</p>
 
     <h2>4. Storage and service providers</h2>
-    <p>Operational credentials and logs are stored on the local systems controlled by the authorized operator. Media prepared for social publishing may be stored through Cloudinary when that service is configured. Published content may contain links selected by the operator. Meta receives information necessary to provide the Facebook, Instagram and Threads APIs. Each provider processes information under its own terms and privacy policy.</p>
+    <p>Account credentials, connection records and operational logs are stored on the operator's computer, with separate profile files. Shared developer-client configuration is stored separately from account tokens. YouTube resumable-session locations are sensitive capabilities stored privately in the profile's upload-session file, not displayed or logged. Local credential and session files are plaintext; MasterPost does not claim to encrypt them at rest. They are excluded from Git. The operator must protect device access, file permissions and backups. Provider requests use HTTPS; authorized local desktop callbacks are restricted to the loopback interface. Selected video and thumbnail bytes and approved publication metadata are transmitted directly to YouTube when publication is authorized.</p>
+    <p>Cloudinary receives media selected for upload and may provide publicly accessible media URLs. Do not upload private labels, customer details or secrets. Provider APIs receive the data needed for the authorized request; Meta data is not supplied to Google or X merely because both accounts are connected. MasterPost does not send YouTube/X API data to Cloudinary for connection verification.</p>
+    <p>Accounts uses browser local storage for per-profile platform-card layout preferences. It does not store account tokens there or use advertising trackers in the local interface. Google, X and Meta may use their own cookies on their login pages. Public policy pages are hosted by GitHub Pages, whose hosting operations are governed by the <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">GitHub Privacy Statement</a>. Published shop or affiliate links lead to separate websites governed by their own policies.</p>
 
     <h2>5. Sharing and sale of information</h2>
-    <p>MasterPost and its operator do not sell personal information processed by the application. Information is not shared for unrelated advertising purposes. It may be disclosed to service providers only when necessary to operate the application, comply with law, protect security or respond to a valid legal request.</p>
+    <p>MasterPost does not sell or license provider API data, share it for unrelated advertising, create cross-platform advertising profiles from it, or use it to train general-purpose AI models. Data may be disclosed only for the authorized operation and where permitted by the provider's terms and applicable law. The operator limits access to authorized personnel and necessary service providers. Connecting multiple profiles does not permit sharing one account's protected data with another profile.</p>
 
     <h2>6. Retention and security</h2>
-    <p>Information is retained only for as long as reasonably necessary for operation, security, legal compliance and troubleshooting. Access tokens are kept confidential and are removed, replaced or revoked when no longer required. Reasonable safeguards are used, but no method of electronic storage or transmission is completely secure.</p>
+    <p>Data is kept only while needed for the disclosed, authorized purpose and within the relevant provider's retention rules. Tokens are not treated as permanently valid and may be revoked or expire. Expired authorization does not permit continued collection. Provider-specific requirements below override a longer general retention period:</p>
+    <ul>
+      <li><strong>Meta:</strong> unnecessary data and data subject to a valid deletion request must be removed promptly or as soon as reasonably possible under the Meta Platform Terms. A shorter required deadline is not postponed by this policy.</li>
+      <li><strong>YouTube:</strong> applicable stored channel metadata must be refreshed or deleted within 30 calendar days. Following consent revocation or a deletion request, relevant API data must be deleted as soon as possible and within seven calendar days; authorization must be rechecked and data removed when it can no longer be legitimately refreshed.</li>
+      <li><strong>X:</strong> stored API content must reflect its current state. Applicable update/deletion requests from X or the account owner must be completed as soon as reasonably possible and within 24 hours, subject to X's stated requirements.</li>
+    </ul>
+    <p>Deletion covers relevant local data, credentials, logs and operator-controlled backup copies. Any legally required retention must be limited, documented and permitted by the applicable provider terms; retained data is not reused for publishing. No universal 30-day grace period applies. Some controls remain operator-managed; this policy does not claim that missing revocation, freshness or deletion automation is already implemented. No storage or transmission method is completely secure.</p>
 
     <h2>7. Your choices and deletion requests</h2>
-    <p>You may request access to, correction of or deletion of information associated with you that is held by MasterPost. Instructions are available on the <a href="data-deletion.html">Data Deletion Instructions</a> page. You may also remove the application's access through the relevant Meta account settings, where available.</p>
+    <p>You may request access, correction or deletion through the <a href="data-deletion.html">Data Deletion Instructions</a>. You do not need a public MasterPost account to make a request. The operator must stop affected jobs when access is withdrawn. Removing a platform card only changes layout; it does not revoke authorization or delete data.</p>
+    <p>For YouTube, you can revoke MasterPost's access through <a href="https://security.google.com/settings/security/permissions">Google's security permissions page</a>. For X, use <a href="https://x.com/settings/connected_apps">Connected apps</a>. For Meta, use the relevant Facebook, Instagram or Threads app/website permission settings. Provider-side revocation and deletion of local records are separate operations: revocation does not remove MasterPost's obligation to delete applicable stored data. An email is a way to report or request action, not an extra prerequisite after a provider-side revocation has been detected.</p>
 
     <h2>8. Children's privacy</h2>
     <p>MasterPost is not intended for children and does not knowingly collect personal information from children.</p>
 
     <h2>9. Changes to this policy</h2>
-    <p>This policy may be updated when MasterPost's functionality or legal obligations change. The effective date shown above will be updated when material revisions are made.</p>
+    <p>This policy may be updated when MasterPost's functionality or legal obligations change. The revision date shown above will be updated when material revisions are made.</p>
 
     <h2>10. Contact</h2>
-    <p>For privacy questions or requests concerning MasterPost, contact <a href="mailto:1affiliatesurfmart@gmail.com">1affiliatesurfmart@gmail.com</a>.</p>
+    <p>For privacy questions or requests concerning MasterPost, contact <a href="mailto:aringemas91@gmail.com">aringemas91@gmail.com</a>.</p>
+    <p>Security vulnerabilities can be reported through the same address. Do not include passwords or tokens.</p>
+    <h2>11. Provider policies</h2>
+    <p>MasterPost does not override a provider's rules or claim official endorsement. Relevant notices include the <a href="https://www.facebook.com/privacy/policy/">Meta Privacy Policy</a>, <a href="https://policies.google.com/privacy">Google Privacy Policy</a> and <a href="https://x.com/en/privacy">X Privacy Policy</a>. These apply alongside the providers' API terms and MasterPost's <a href="terms.html">Terms of Service</a>.</p>
   </main>
 </body>
 </html>
